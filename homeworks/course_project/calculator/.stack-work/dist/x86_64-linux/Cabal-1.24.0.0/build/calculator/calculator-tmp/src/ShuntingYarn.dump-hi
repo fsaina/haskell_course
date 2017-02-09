@@ -1,0 +1,693 @@
+
+==================== FINAL INTERFACE ====================
+2017-01-16 18:03:09.090267194 UTC
+
+interface main@main:ShuntingYarn 8001
+  interface hash: f69419e8e16663a3e0848aeb3f6864e4
+  ABI hash: 21f7613721237ead8b792d9f5146251b
+  export-list hash: d8e82cebda1cecb6c620f1567e0f84ba
+  orphan hash: a9b9bc4a52bd770950fa2db2a4f6ab6f
+  flag hash: 4dbabd7445992f4916605fde2678d83c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ShuntingYarn.convert
+module dependencies:
+package dependencies: MissingH-1.4.0.1@MissingH-1.4.0.1-EKn7kuoDq1aaX1Pfc3iyM
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+import  -/  MissingH-1.4.0.1@MissingH-1.4.0.1-EKn7kuoDq1aaX1Pfc3iyM:Data.List.Utils 5bd3d5065588c83ad5f70f9eef12f0ca
+import  -/  base-4.9.0.0:Data.Char eb33dc25ecb52d018a0ca26590e2b50b
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:Data.Tuple acb0ed10307ed88df6c81b8589f4de16
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:GHC.Unicode 2343b0871604cc5116abba8f24d75b42
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map 24b19ef74cea78e4c18332bed9f0491d
+import  -/  containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base 1e8d61dcc59a1a983b27bab6fd6bdcaf
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fEqToken :: GHC.Classes.Eq ShuntingYarn.Token
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ShuntingYarn.Token
+                  ShuntingYarn.$fEqToken_$c==
+                  ShuntingYarn.$fEqToken_$c/= -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fEqToken_$c/= ::
+    ShuntingYarn.Token -> ShuntingYarn.Token -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: ShuntingYarn.Token) (b :: ShuntingYarn.Token) ->
+                 case ShuntingYarn.$fEqToken_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fEqToken_$c== ::
+    ShuntingYarn.Token -> ShuntingYarn.Token -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: ShuntingYarn.Token)
+                   (ds1 :: ShuntingYarn.Token) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.==#
+                           (GHC.Prim.dataToTag# @ ShuntingYarn.Token wild)
+                           (GHC.Prim.dataToTag# @ ShuntingYarn.Token ds1))
+                   ShuntingYarn.Number a1
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag# @ ShuntingYarn.Token wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 0# -> GHC.Types.True }
+                        ShuntingYarn.Number b1 -> GHC.Classes.eqInt a1 b1 }
+                   ShuntingYarn.Variable a1
+                   -> case ds1 of wild1 {
+                        DEFAULT
+                        -> case GHC.Prim.dataToTag# @ ShuntingYarn.Token wild1 of wild2 {
+                             DEFAULT -> GHC.Types.False 3# -> GHC.Types.True }
+                        ShuntingYarn.Variable b1 -> GHC.Classes.eqChar a1 b1 } }) -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fShowToken :: GHC.Show.Show ShuntingYarn.Token
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ShuntingYarn.Token
+                  ShuntingYarn.$fShowToken_$cshowsPrec
+                  ShuntingYarn.$fShowToken_$cshow
+                  ShuntingYarn.$fShowToken_$cshowList -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fShowToken1 :: ShuntingYarn.Token -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (ShuntingYarn.$fShowToken_$cshowsPrec
+                   ShuntingYarn.$fShowToken2) -}
+21ab07bebfbe848353040c6318e3ec3a
+  $fShowToken10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "MulOp"#) -}
+9975dc193168afa5c1db80fc4a62a161
+  $fShowToken11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "AddOp"#) -}
+94ef9646ddd8743e5803aefa94917609
+  $fShowToken12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   GHC.Show.shows18
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+2d9f085460fe5c0aca3ecda9f233c473
+  $fShowToken13 :: [GHC.Types.Char]
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   GHC.Show.shows19
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e60963f36326d87bce7956880ba0a851
+  $fShowToken14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Variable "#) -}
+c72366bca9ab05b752712410d2da589a
+  $fShowToken15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ParenClose"#) -}
+84b8e410f90ec37faa56173f247fd6c7
+  $fShowToken16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ParenOpen"#) -}
+0e786454b41d123424a68b098ed028d1
+  $fShowToken17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Number "#) -}
+1ec26853ebb4d9b03388783cf39e0fde
+  $fShowToken2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+c2aa802a7173a8c6d7aeab97412f8212
+  $fShowToken3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "LogOp"#) -}
+d767cf63c49f93c88f8be175a926ce63
+  $fShowToken4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ExpOp"#) -}
+685877ed056bda730963d12a0c022608
+  $fShowToken5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SinOp"#) -}
+b3fca820702e39e7525c7d53047d0d1d
+  $fShowToken6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "CosOp"#) -}
+3a9b5ff04bde946979de1884e2e3b634
+  $fShowToken7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "PowOp"#) -}
+65a13e1760ab4678bf8bc900339b03cd
+  $fShowToken8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SubOp"#) -}
+11473385a752f16dfa6613b410a26ccf
+  $fShowToken9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "DivOp"#) -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fShowToken_$cshow :: ShuntingYarn.Token -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: ShuntingYarn.Token) ->
+                 case x of wild {
+                   ShuntingYarn.Number b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ShuntingYarn.$fShowToken17
+                        (case b1 of ww2 { GHC.Types.I# ww3 ->
+                         case GHC.Show.$wshowSignedInt
+                                11#
+                                ww3
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                   ShuntingYarn.ParenOpen -> ShuntingYarn.$fShowToken16
+                   ShuntingYarn.ParenClose -> ShuntingYarn.$fShowToken15
+                   ShuntingYarn.Variable b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ShuntingYarn.$fShowToken14
+                        (case b1 of ww { GHC.Types.C# ww1 ->
+                         case ww1 of ds {
+                           DEFAULT
+                           -> GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows19
+                                (GHC.Show.$wshowLitChar ds ShuntingYarn.$fShowToken13)
+                           '\''# -> ShuntingYarn.$fShowToken12 } })
+                   ShuntingYarn.AddOp -> ShuntingYarn.$fShowToken11
+                   ShuntingYarn.MulOp -> ShuntingYarn.$fShowToken10
+                   ShuntingYarn.DivOp -> ShuntingYarn.$fShowToken9
+                   ShuntingYarn.SubOp -> ShuntingYarn.$fShowToken8
+                   ShuntingYarn.PowOp -> ShuntingYarn.$fShowToken7
+                   ShuntingYarn.CosOp -> ShuntingYarn.$fShowToken6
+                   ShuntingYarn.SinOp -> ShuntingYarn.$fShowToken5
+                   ShuntingYarn.ExpOp -> ShuntingYarn.$fShowToken4
+                   ShuntingYarn.LogOp -> ShuntingYarn.$fShowToken3 }) -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fShowToken_$cshowList :: [ShuntingYarn.Token] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ ShuntingYarn.Token
+                   ShuntingYarn.$fShowToken1) -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  $fShowToken_$cshowsPrec ::
+    GHC.Types.Int -> ShuntingYarn.Token -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+dd3bc07e823373a34407bd37f05a8e0a
+  $sfromList ::
+    [(GHC.Types.Char, a)] -> Data.Map.Base.Map GHC.Types.Char a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(GHC.Types.Char, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Base.Tip @ GHC.Types.Char @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { GHC.Types.C# ipv ->
+                           Data.Map.Base.Bin
+                             @ GHC.Types.Char
+                             @ a
+                             1#
+                             dt
+                             x
+                             (Data.Map.Base.Tip @ GHC.Types.Char @ a)
+                             (Data.Map.Base.Tip @ GHC.Types.Char @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of wild4 { GHC.Types.C# c1 ->
+                           case ky of wild5 { GHC.Types.C# c2 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.geChar# c1 c2) of wild6 {
+                             GHC.Types.False
+                             -> ShuntingYarn.$wpoly_go10
+                                  @ a
+                                  1#
+                                  (Data.Map.Base.Bin
+                                     @ GHC.Types.Char
+                                     @ a
+                                     1#
+                                     wild4
+                                     x
+                                     (Data.Map.Base.Tip @ GHC.Types.Char @ a)
+                                     (Data.Map.Base.Tip @ GHC.Types.Char @ a))
+                                  wild2
+                             GHC.Types.True
+                             -> ShuntingYarn.$sfromList1
+                                  @ a
+                                  (Data.Map.Base.Bin
+                                     @ GHC.Types.Char
+                                     @ a
+                                     1#
+                                     wild4
+                                     x
+                                     (Data.Map.Base.Tip @ GHC.Types.Char @ a)
+                                     (Data.Map.Base.Tip @ GHC.Types.Char @ a))
+                                  wild2 } } } } } } }) -}
+6776adf033a4469b4ef41a6239a5e9d9
+  $sfromList1 ::
+    Data.Map.Base.Map GHC.Types.Char a1
+    -> [(GHC.Types.Char, a1)] -> Data.Map.Base.Map GHC.Types.Char a1
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+89471568562911641be50980eda92ef2
+  $tc'AddOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   937161397435950704##
+                   6851388651402319541##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'AddOp1) -}
+6515a7450fcc379b1a894eb4edbec266
+  $tc'AddOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'AddOp"#) -}
+c170662dd51d4578acff683e8ed1e995
+  $tc'CosOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16963258198086227531##
+                   8749329648574943519##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'CosOp1) -}
+96e91ecbd1d656823ee2449821d07b46
+  $tc'CosOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'CosOp"#) -}
+f7f0ee0dcc9eb6ae3d6a8109bd4bcd10
+  $tc'DivOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15660111544879552290##
+                   9137235297989020654##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'DivOp1) -}
+f829e3c4189920392ca10b8fdde7521c
+  $tc'DivOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'DivOp"#) -}
+e1bce957b7726991bea50ec3d823a98d
+  $tc'ExpOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16135788066706966284##
+                   11364925517720639084##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'ExpOp1) -}
+673a8383eb44409943bb92257cf28a4a
+  $tc'ExpOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ExpOp"#) -}
+14b761ef5fb2ae4c8559345461b54e67
+  $tc'LogOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   286259220893776982##
+                   10489438115893293656##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'LogOp1) -}
+0f03b3b7c413813891e3465866d6a26e
+  $tc'LogOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'LogOp"#) -}
+aae68ad25b080b05d85e24bece147c65
+  $tc'MulOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11325228590500799995##
+                   6507847505646834256##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'MulOp1) -}
+b40b4825bc96485ca21bc8fa07913361
+  $tc'MulOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'MulOp"#) -}
+8bcb7b4019b887b266a98f3eca32aa4d
+  $tc'Number :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1554510270824097384##
+                   11522283673955760411##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'Number1) -}
+ca0934b3dfe4ef63d490a51c4e774491
+  $tc'Number1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Number"#) -}
+4e32e1d4f52fb3c7a2ac2fa2e28b475a
+  $tc'ParenClose :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1660982856461240487##
+                   8592839158659155359##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'ParenClose1) -}
+ad259e38dae88dca31a7e5b6185a27be
+  $tc'ParenClose1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ParenClose"#) -}
+bec5fdb84a8917460ef2537a24221247
+  $tc'ParenOpen :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9510376708023922119##
+                   6541177707080024333##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'ParenOpen1) -}
+929d72e5b1b504c4c1a23b9bbce58a29
+  $tc'ParenOpen1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'ParenOpen"#) -}
+d94cffe8b2049cf94a050327c12d5f70
+  $tc'PowOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18207487117661631077##
+                   11952137083539668410##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'PowOp1) -}
+064dfa84e16e4c774c499f1b98f0df09
+  $tc'PowOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'PowOp"#) -}
+9a0d681d304818f96cc1a53482511f7c
+  $tc'SinOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10589459362496159131##
+                   7668603345477994429##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'SinOp1) -}
+358b3d4f20f0c9e2aa1a9b7cd3a2e5cf
+  $tc'SinOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SinOp"#) -}
+4cdaf8282c9af183d82f19fe1c0788a6
+  $tc'SubOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1309696926288702656##
+                   14167146457884240747##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'SubOp1) -}
+5fb6e4f459686389d6ee7818a1c35372
+  $tc'SubOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SubOp"#) -}
+b4ca7c7e5bd74770921d88653a8454ef
+  $tc'Variable :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15790143736664106972##
+                   2231811454722188258##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tc'Variable1) -}
+f18fb06f7d4319d42aa7f068f8df0fba
+  $tc'Variable1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Variable"#) -}
+c62f1e602d2855ec415f6c646af8f28e
+  $tcToken :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1372309176790705022##
+                   15960159375109032733##
+                   ShuntingYarn.$trModule
+                   ShuntingYarn.$tcToken1) -}
+58b8a6920e740d2514398d14cb4cd83e
+  $tcToken1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Token"#) -}
+f3b6ba346046cfc9b7be477ee80b44b3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   ShuntingYarn.$trModule2
+                   ShuntingYarn.$trModule1) -}
+0c28cb5da039d5db5bf8fda7da5ae62d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "ShuntingYarn"#) -}
+25a4fbd6982fea142111b4b762efe486
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+60c982b6b83dd5b2ee885e3b0d0fe547
+  $w$sgo10 ::
+    GHC.Prim.Char#
+    -> a1
+    -> Data.Map.Base.Map GHC.Types.Char a1
+    -> Data.Map.Base.Map GHC.Types.Char a1
+  {- Arity: 3, Strictness: <L,U><L,U><S,1*U>, Inline: [0] -}
+03a441c63ecf2c04d417be380fa13f99
+  $wpoly_go1 ::
+    GHC.Prim.Char#
+    -> Data.Map.Base.Map GHC.Types.Char a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>, Inline: [0] -}
+3a85f2039f7ec018b031f79e97012879
+  $wpoly_go10 ::
+    GHC.Prim.Int#
+    -> Data.Map.Base.Map GHC.Types.Char a
+    -> [(GHC.Types.Char, a)]
+    -> Data.Map.Base.Map GHC.Types.Char a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+26af2640a5708ff0f8c99c0c9d62e48a
+  data Token
+    = Number GHC.Types.Int
+    | ParenOpen
+    | ParenClose
+    | Variable GHC.Types.Char
+    | AddOp
+    | MulOp
+    | DivOp
+    | SubOp
+    | PowOp
+    | CosOp
+    | SinOp
+    | ExpOp
+    | LogOp
+6d17aa5f8818c253c9e2f7614ed7574f
+  convert :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 case Data.List.Utils.split
+                        @ GHC.Types.Char
+                        GHC.Classes.$fEqChar
+                        ShuntingYarn.convert18
+                        (Data.List.Utils.replace
+                           @ GHC.Types.Char
+                           GHC.Classes.$fEqChar
+                           ShuntingYarn.convert17
+                           (GHC.Types.[] @ GHC.Types.Char)
+                           x) of wild {
+                   []
+                   -> case ShuntingYarn.convert16 of wild1 {
+                        [] -> ShuntingYarn.convert11
+                        : x1 xs
+                        -> ShuntingYarn.convert_go
+                             (ShuntingYarn.convert_transform'
+                                (ShuntingYarn.convert_loop
+                                   (ShuntingYarn.convert3 x1 xs)
+                                   (GHC.Types.[] @ (GHC.Base.Maybe ShuntingYarn.Token)))
+                                (GHC.Types.[] @ ShuntingYarn.Token)
+                                (GHC.Types.[] @ ShuntingYarn.Token)) }
+                   : x1 xs
+                   -> case Data.List.Utils.split
+                             @ GHC.Types.Char
+                             GHC.Classes.$fEqChar
+                             ShuntingYarn.convert2
+                             (Data.List.Utils.replace1
+                                @ GHC.Types.Char
+                                (GHC.Types.:
+                                   @ [GHC.Types.Char]
+                                   x1
+                                   (Data.OldList.prependToAll
+                                      @ [GHC.Types.Char]
+                                      ShuntingYarn.convert1
+                                      xs))) of wild1 {
+                        [] -> ShuntingYarn.convert11
+                        : x2 xs1
+                        -> ShuntingYarn.convert_go
+                             (ShuntingYarn.convert_transform'
+                                (ShuntingYarn.convert_loop
+                                   (ShuntingYarn.convert3 x2 xs1)
+                                   (GHC.Types.[] @ (GHC.Base.Maybe ShuntingYarn.Token)))
+                                (GHC.Types.[] @ ShuntingYarn.Token)
+                                (GHC.Types.[] @ ShuntingYarn.Token)) } }) -}
+659aed2575bce46cfb2df9733abe2d84
+  convert1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "E"#) -}
+96fdec39791913329745fe5102425c90
+  convert10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "sin"#) -}
+0ea525a1726f02c731af44bad92e886e
+  convert11 :: [GHC.Types.Char]
+  {- Unfolding: (ShuntingYarn.convert_go ShuntingYarn.convert12) -}
+3315176a9284314b4f6338df142761c9
+  convert12 :: [ShuntingYarn.Token]
+  {- Unfolding: (ShuntingYarn.convert_transform'
+                   ShuntingYarn.convert13
+                   (GHC.Types.[] @ ShuntingYarn.Token)
+                   (GHC.Types.[] @ ShuntingYarn.Token)) -}
+0d8a7dc539c7a609142a2676fde8f993
+  convert13 :: [GHC.Base.Maybe ShuntingYarn.Token]
+  {- Unfolding: (ShuntingYarn.convert_loop
+                   ShuntingYarn.convert14
+                   (GHC.Types.[] @ (GHC.Base.Maybe ShuntingYarn.Token))) -}
+92be9848eeee2c33e0752069f636fa5a
+  convert14 :: GHC.Base.String
+  {- Unfolding: (ShuntingYarn.convert15 GHC.Prim.void#) -}
+e98a317a5bec590691112ea341228065
+  convert15 :: GHC.Prim.Void# -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: (\ (w :: GHC.Prim.Void#)[OneShot] ->
+                 case Data.List.Utils.split
+                        @ GHC.Types.Char
+                        GHC.Classes.$fEqChar
+                        ShuntingYarn.convert10
+                        (GHC.Types.[] @ GHC.Types.Char) of wild {
+                   [] -> ShuntingYarn.convert8 GHC.Prim.void#
+                   : x xs -> ShuntingYarn.convert4 x xs }) -}
+d6852d6da7fbd6b1f6997d946a41f8d7
+  convert16 :: [[GHC.Types.Char]]
+  {- Unfolding: (Data.List.Utils.split
+                   @ GHC.Types.Char
+                   GHC.Classes.$fEqChar
+                   ShuntingYarn.convert2
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+6fb6bfd5242d33c5237ca95634ec8d72
+  convert17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " "#) -}
+3df3259e9f83848bd800b280fb72554f
+  convert18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "exp"#) -}
+5dd33fabe662bb5743541f4c8c8301c8
+  convert2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "log"#) -}
+38c0cfb66316dfb782454959149d0a9d
+  convert3 ::
+    [GHC.Types.Char] -> [[GHC.Types.Char]] -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><L,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char])[OneShot]
+                   (xs :: [[GHC.Types.Char]])[OneShot] ->
+                 case Data.List.Utils.split
+                        @ GHC.Types.Char
+                        GHC.Classes.$fEqChar
+                        ShuntingYarn.convert10
+                        (Data.List.Utils.replace1
+                           @ GHC.Types.Char
+                           (GHC.Types.:
+                              @ [GHC.Types.Char]
+                              x
+                              (Data.OldList.prependToAll
+                                 @ [GHC.Types.Char]
+                                 ShuntingYarn.convert9
+                                 xs))) of wild {
+                   [] -> ShuntingYarn.convert8 GHC.Prim.void#
+                   : x1 xs1 -> ShuntingYarn.convert4 x1 xs1 }) -}
+0e088525ae4e5ba8975bef700074db9f
+  convert4 ::
+    [GHC.Types.Char] -> [[GHC.Types.Char]] -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><L,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char])[OneShot]
+                   (xs :: [[GHC.Types.Char]])[OneShot] ->
+                 case Data.List.Utils.split
+                        @ GHC.Types.Char
+                        GHC.Classes.$fEqChar
+                        ShuntingYarn.convert7
+                        (Data.List.Utils.replace1
+                           @ GHC.Types.Char
+                           (GHC.Types.:
+                              @ [GHC.Types.Char]
+                              x
+                              (Data.OldList.prependToAll
+                                 @ [GHC.Types.Char]
+                                 ShuntingYarn.convert6
+                                 xs))) of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x1 xs1
+                   -> Data.List.Utils.replace1
+                        @ GHC.Types.Char
+                        (GHC.Types.:
+                           @ [GHC.Types.Char]
+                           x1
+                           (Data.OldList.prependToAll
+                              @ [GHC.Types.Char]
+                              ShuntingYarn.convert5
+                              xs1)) }) -}
+ec29bd9f2d0a48361f7a67098769f6e5
+  convert5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "C"#) -}
+739ba24e8f3fb1186b6f1fcc0e560bb7
+  convert6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "S"#) -}
+3ad9453e28d505ad339f5c620083aea9
+  convert7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "cos"#) -}
+256a66ca69a1f35bf741718522e1ebae
+  convert8 :: GHC.Prim.Void# -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: (\ (w :: GHC.Prim.Void#)[OneShot] ->
+                 case Data.List.Utils.split
+                        @ GHC.Types.Char
+                        GHC.Classes.$fEqChar
+                        ShuntingYarn.convert7
+                        (GHC.Types.[] @ GHC.Types.Char) of wild {
+                   [] -> GHC.Types.[] @ GHC.Types.Char
+                   : x xs
+                   -> Data.List.Utils.replace1
+                        @ GHC.Types.Char
+                        (GHC.Types.:
+                           @ [GHC.Types.Char]
+                           x
+                           (Data.OldList.prependToAll
+                              @ [GHC.Types.Char]
+                              ShuntingYarn.convert5
+                              xs)) }) -}
+8d20b12a1b05fb658612f009203e2601
+  convert9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "L"#) -}
+211992c9fb7c82ae76d4e3083e06867b
+  convert_go :: [ShuntingYarn.Token] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+accf58cbe6a3fdcd4ebee26c5f19d9ae
+  convert_loop ::
+    GHC.Base.String
+    -> [GHC.Base.Maybe ShuntingYarn.Token]
+    -> [GHC.Base.Maybe ShuntingYarn.Token]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U> -}
+27a3f7e9efc5fb471bc756aaf48bb8b1
+  convert_transform' ::
+    [GHC.Base.Maybe ShuntingYarn.Token]
+    -> [ShuntingYarn.Token]
+    -> [ShuntingYarn.Token]
+    -> [ShuntingYarn.Token]
+  {- Arity: 3, Strictness: <S,1*U><L,U><S,1*U> -}
+instance [safe] GHC.Classes.Eq [ShuntingYarn.Token]
+  = ShuntingYarn.$fEqToken
+instance [safe] GHC.Show.Show [ShuntingYarn.Token]
+  = ShuntingYarn.$fShowToken
+"SPEC/ShuntingYarn fromList @ Char _" [ALWAYS] forall @ a
+                                                      ($dOrd :: GHC.Classes.Ord GHC.Types.Char)
+  Data.Map.Base.fromList @ GHC.Types.Char @ a $dOrd
+  = ShuntingYarn.$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

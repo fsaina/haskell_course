@@ -1,0 +1,753 @@
+
+==================== FINAL INTERFACE ====================
+2017-01-16 18:03:09.544362198 UTC
+
+interface main@main:ExpressionEvaluator 8001
+  interface hash: 4d0f938f746633970a2fdbd4466fdac3
+  ABI hash: 177043bb45a10c4faa5bf66c0b4c399e
+  export-list hash: e36cc2577be9a7130dfd52bfd0adf289
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4dbabd7445992f4916605fde2678d83c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ExpressionEvaluator.createExpression
+  ExpressionEvaluator.deriveBy
+  ExpressionEvaluator.evaluate
+  ExpressionEvaluator.substitute
+  ExpressionEvaluator.Tree
+module dependencies: ShuntingYarn
+package dependencies: MissingH-1.4.0.1@MissingH-1.4.0.1-EKn7kuoDq1aaX1Pfc3iyM
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+import  -/  base-4.9.0.0:Data.Char eb33dc25ecb52d018a0ca26590e2b50b
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Err 3bba35a16538d33d424682ce66876cdd
+import  -/  base-4.9.0.0:GHC.Float 469226b1bc53433e95d0167dec5d0312
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:GHC.Unicode 2343b0871604cc5116abba8f24d75b42
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ShuntingYarn 21f7613721237ead8b792d9f5146251b
+  exports: d8e82cebda1cecb6c620f1567e0f84ba
+  convert 6d17aa5f8818c253c9e2f7614ed7574f
+84e7f845911ddf3e7d2d65a42d043281
+  $fEqFunction :: GHC.Classes.Eq ExpressionEvaluator.Function
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ExpressionEvaluator.Function
+                  ExpressionEvaluator.$fEqFunction_$c==
+                  ExpressionEvaluator.$fEqFunction_$c/= -}
+84e7f845911ddf3e7d2d65a42d043281
+  $fEqFunction_$c/= ::
+    ExpressionEvaluator.Function
+    -> ExpressionEvaluator.Function -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: ExpressionEvaluator.Function)
+                   (b :: ExpressionEvaluator.Function) ->
+                 case a of wild {
+                   ExpressionEvaluator.Cosine
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Cosine -> GHC.Types.False }
+                   ExpressionEvaluator.Sine
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Sine -> GHC.Types.False }
+                   ExpressionEvaluator.Exp
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Exp -> GHC.Types.False }
+                   ExpressionEvaluator.Log
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Log -> GHC.Types.False } }) -}
+84e7f845911ddf3e7d2d65a42d043281
+  $fEqFunction_$c== ::
+    ExpressionEvaluator.Function
+    -> ExpressionEvaluator.Function -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: ExpressionEvaluator.Function)
+                   (ds1 :: ExpressionEvaluator.Function) ->
+                 case ds of wild {
+                   ExpressionEvaluator.Cosine
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Cosine -> GHC.Types.True }
+                   ExpressionEvaluator.Sine
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Sine -> GHC.Types.True }
+                   ExpressionEvaluator.Exp
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Exp -> GHC.Types.True }
+                   ExpressionEvaluator.Log
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Log -> GHC.Types.True } }) -}
+7e4598044c7e60a101b0ac32d4620198
+  $fEqOperator :: GHC.Classes.Eq ExpressionEvaluator.Operator
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ExpressionEvaluator.Operator
+                  ExpressionEvaluator.$fEqOperator_$c==
+                  ExpressionEvaluator.$fEqOperator_$c/= -}
+7e4598044c7e60a101b0ac32d4620198
+  $fEqOperator_$c/= ::
+    ExpressionEvaluator.Operator
+    -> ExpressionEvaluator.Operator -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: ExpressionEvaluator.Operator)
+                   (b :: ExpressionEvaluator.Operator) ->
+                 case a of wild {
+                   ExpressionEvaluator.Plus
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Plus -> GHC.Types.False }
+                   ExpressionEvaluator.Minus
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Minus -> GHC.Types.False }
+                   ExpressionEvaluator.Multiply
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Multiply -> GHC.Types.False }
+                   ExpressionEvaluator.Divide
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Divide -> GHC.Types.False }
+                   ExpressionEvaluator.Power
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        ExpressionEvaluator.Power -> GHC.Types.False } }) -}
+7e4598044c7e60a101b0ac32d4620198
+  $fEqOperator_$c== ::
+    ExpressionEvaluator.Operator
+    -> ExpressionEvaluator.Operator -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: ExpressionEvaluator.Operator)
+                   (ds1 :: ExpressionEvaluator.Operator) ->
+                 case ds of wild {
+                   ExpressionEvaluator.Plus
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Plus -> GHC.Types.True }
+                   ExpressionEvaluator.Minus
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Minus -> GHC.Types.True }
+                   ExpressionEvaluator.Multiply
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Multiply -> GHC.Types.True }
+                   ExpressionEvaluator.Divide
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Divide -> GHC.Types.True }
+                   ExpressionEvaluator.Power
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        ExpressionEvaluator.Power -> GHC.Types.True } }) -}
+a93682e365c20b0fab550b1a5821ca77
+  $fEqTree :: GHC.Classes.Eq ExpressionEvaluator.Tree
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ExpressionEvaluator.Tree
+                  ExpressionEvaluator.$fEqTree_$c==
+                  ExpressionEvaluator.$fEqTree_$c/= -}
+a93682e365c20b0fab550b1a5821ca77
+  $fEqTree_$c/= ::
+    ExpressionEvaluator.Tree
+    -> ExpressionEvaluator.Tree -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: ExpressionEvaluator.Tree)
+                   (b :: ExpressionEvaluator.Tree) ->
+                 case ExpressionEvaluator.$fEqTree_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+a93682e365c20b0fab550b1a5821ca77
+  $fEqTree_$c== ::
+    ExpressionEvaluator.Tree
+    -> ExpressionEvaluator.Tree -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+84e7f845911ddf3e7d2d65a42d043281
+  $fShowFunction :: GHC.Show.Show ExpressionEvaluator.Function
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ExpressionEvaluator.Function
+                  ExpressionEvaluator.$fShowFunction_$cshowsPrec
+                  ExpressionEvaluator.$fShowFunction_$cshow
+                  ExpressionEvaluator.$fShowFunction_$cshowList -}
+fec3a2e25e9c9e429c0f0ec626f78291
+  $fShowFunction1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "log"#) -}
+63d7f4900de3064ab93f3bf038a529a4
+  $fShowFunction2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "exp"#) -}
+c35169662f2c9b62953f076af46f8d91
+  $fShowFunction3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "sin"#) -}
+3c1ea84e547303305742a49a3c20d55f
+  $fShowFunction4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "cos"#) -}
+84e7f845911ddf3e7d2d65a42d043281
+  $fShowFunction_$cshow ::
+    ExpressionEvaluator.Function -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: ExpressionEvaluator.Function) ->
+                 case ds of wild {
+                   ExpressionEvaluator.Cosine -> ExpressionEvaluator.$fShowFunction4
+                   ExpressionEvaluator.Sine -> ExpressionEvaluator.$fShowFunction3
+                   ExpressionEvaluator.Exp -> ExpressionEvaluator.$fShowFunction2
+                   ExpressionEvaluator.Log
+                   -> ExpressionEvaluator.$fShowFunction1 }) -}
+84e7f845911ddf3e7d2d65a42d043281
+  $fShowFunction_$cshowList ::
+    [ExpressionEvaluator.Function] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [ExpressionEvaluator.Function]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ ExpressionEvaluator.Function
+                   (ExpressionEvaluator.$fShowFunction_$cshowsPrec GHC.Show.shows22)
+                   ls
+                   s) -}
+84e7f845911ddf3e7d2d65a42d043281
+  $fShowFunction_$cshowsPrec ::
+    GHC.Types.Int -> ExpressionEvaluator.Function -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: ExpressionEvaluator.Function)
+                   (w2 :: GHC.Base.String) ->
+                 ExpressionEvaluator.$w$cshowsPrec w1 w2) -}
+7e4598044c7e60a101b0ac32d4620198
+  $fShowOperator :: GHC.Show.Show ExpressionEvaluator.Operator
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ExpressionEvaluator.Operator
+                  ExpressionEvaluator.$fShowOperator_$cshowsPrec
+                  ExpressionEvaluator.$fShowOperator_$cshow
+                  ExpressionEvaluator.$fShowOperator_$cshowList -}
+19c139e954976ba1aa7bc04a68a74a58
+  $fShowOperator1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "^"#) -}
+f538ddc92791f8db55a28f4b0379b39b
+  $fShowOperator2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "/"#) -}
+a410350580f53c57ba432bd116bca7cb
+  $fShowOperator3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "*"#) -}
+05ae363e32fff5caf7f1d898e0ea3817
+  $fShowOperator4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "-"#) -}
+8a04f7c6646a4a46840dea87db3ea0a2
+  $fShowOperator5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "+"#) -}
+7e4598044c7e60a101b0ac32d4620198
+  $fShowOperator_$cshow ::
+    ExpressionEvaluator.Operator -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: ExpressionEvaluator.Operator) ->
+                 case ds of wild {
+                   ExpressionEvaluator.Plus -> ExpressionEvaluator.$fShowOperator5
+                   ExpressionEvaluator.Minus -> ExpressionEvaluator.$fShowOperator4
+                   ExpressionEvaluator.Multiply -> ExpressionEvaluator.$fShowOperator3
+                   ExpressionEvaluator.Divide -> ExpressionEvaluator.$fShowOperator2
+                   ExpressionEvaluator.Power
+                   -> ExpressionEvaluator.$fShowOperator1 }) -}
+7e4598044c7e60a101b0ac32d4620198
+  $fShowOperator_$cshowList ::
+    [ExpressionEvaluator.Operator] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [ExpressionEvaluator.Operator]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ ExpressionEvaluator.Operator
+                   (ExpressionEvaluator.$fShowOperator_$cshowsPrec GHC.Show.shows22)
+                   ls
+                   s) -}
+7e4598044c7e60a101b0ac32d4620198
+  $fShowOperator_$cshowsPrec ::
+    GHC.Types.Int -> ExpressionEvaluator.Operator -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: ExpressionEvaluator.Operator)
+                   (w2 :: GHC.Base.String) ->
+                 ExpressionEvaluator.$w$cshowsPrec1 w1 w2) -}
+a93682e365c20b0fab550b1a5821ca77
+  $fShowTree :: GHC.Show.Show ExpressionEvaluator.Tree
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ ExpressionEvaluator.Tree
+                  ExpressionEvaluator.$fShowTree_$cshowsPrec
+                  ExpressionEvaluator.inorderTraversal
+                  ExpressionEvaluator.$fShowTree_$cshowList -}
+a93682e365c20b0fab550b1a5821ca77
+  $fShowTree1 ::
+    ExpressionEvaluator.Tree -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2,
+     Unfolding: (\ (x :: ExpressionEvaluator.Tree)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (ExpressionEvaluator.inorderTraversal x)
+                   s) -}
+a93682e365c20b0fab550b1a5821ca77
+  $fShowTree_$cshowList ::
+    [ExpressionEvaluator.Tree] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [ExpressionEvaluator.Tree])
+                   (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ ExpressionEvaluator.Tree
+                   ExpressionEvaluator.$fShowTree1
+                   ls
+                   s) -}
+a93682e365c20b0fab550b1a5821ca77
+  $fShowTree_$cshowsPrec ::
+    GHC.Types.Int -> ExpressionEvaluator.Tree -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: ExpressionEvaluator.Tree)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (ExpressionEvaluator.inorderTraversal x))
+                   s) -}
+3b7a41858208ce055b50160b09915988
+  $s^1 :: GHC.Types.Double
+  {- Strictness: x -}
+f7d609bce44458a4dc048a91307136f7
+  $s^2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+4e06168e7543fecb052fa7640f5c038e
+  $seven1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+1fca88b51c7296dfd5ce54d4461e4ac7
+  $tc'BinaryNode :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16120480405000018663##
+                   1571153221403988653##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'BinaryNode1) -}
+2bbd6f3feb93238715dc69f1783fecd1
+  $tc'BinaryNode1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'BinaryNode"#) -}
+c25678265c62ecb8d27872e29aec89b7
+  $tc'Cosine :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4822394501507003579##
+                   5231116915027282673##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Cosine1) -}
+c35ac623a2520a48e90cf35fc9c70a91
+  $tc'Cosine1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Cosine"#) -}
+235e5f7d3d80fb3a4845a5ce2ddb4046
+  $tc'Divide :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4805896204187264419##
+                   8436864374444844073##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Divide1) -}
+7d4c4c610eb5708d35b3c34b83b53557
+  $tc'Divide1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Divide"#) -}
+9031c7f03e4843646a905eef10887830
+  $tc'Exp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   146462805659644309##
+                   7596313985126553885##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Exp1) -}
+ca24c6531c68b6092137a5f8585e1872
+  $tc'Exp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Exp"#) -}
+43f2fd4f76540b65596e01baa4bbd94d
+  $tc'Log :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17336956190875232990##
+                   14251732236021619279##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Log1) -}
+fbcc453ae333497a9ac69553196eac3e
+  $tc'Log1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Log"#) -}
+0571cb7ae853beb336152d90609f1764
+  $tc'Minus :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16113357209068322672##
+                   5312118063507633826##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Minus1) -}
+3ccfe76ac03453b33060592b968740c5
+  $tc'Minus1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Minus"#) -}
+e882b9201bea0071a839e90237d56104
+  $tc'Multiply :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6551949718412112304##
+                   14368706788655893020##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Multiply1) -}
+cbd6b25b727944961e9a2989f8551e63
+  $tc'Multiply1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Multiply"#) -}
+64fc68241a759d99e323a755fa797ae8
+  $tc'NumNode :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15015196289477466690##
+                   17871655267520603838##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'NumNode1) -}
+af9f689000975be71912afba19ebff40
+  $tc'NumNode1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'NumNode"#) -}
+b33379dcdc29445afec42acc8b7c5a64
+  $tc'Plus :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7420564584983890586##
+                   12743413188019159482##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Plus1) -}
+57767416918d7da19d7a6c52b9f19f74
+  $tc'Plus1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Plus"#) -}
+e668934b017489cf144fb356e119886e
+  $tc'Power :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10441267203825746858##
+                   7508382293276264683##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Power1) -}
+0391eeabe454903814b83512b299b49b
+  $tc'Power1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Power"#) -}
+ae46e3d6f32455635dd0d9d22da10150
+  $tc'Sine :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2308190422940442594##
+                   1955924281107962473##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'Sine1) -}
+69f5087547bb3d5d5e19be80cdf46d0a
+  $tc'Sine1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Sine"#) -}
+e1c333bc96c8617debb0cc8379842828
+  $tc'UnaryNode :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17114320935511794693##
+                   14952353733482569453##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'UnaryNode1) -}
+d2889258360b72f9d194298e7561fe0a
+  $tc'UnaryNode1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'UnaryNode"#) -}
+4b11eafb3bca56712d87774e367aa81f
+  $tc'VarNode :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4831849727306027315##
+                   10282706144727865999##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tc'VarNode1) -}
+315ca5f6cef1409aec3a96e15d6cca02
+  $tc'VarNode1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'VarNode"#) -}
+2f053270c77c640978cb4bb3a7cfa608
+  $tcFunction :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1241896357502091893##
+                   6109117654051041781##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tcFunction1) -}
+876bdf514907749a9fd45ce7b04b1d93
+  $tcFunction1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Function"#) -}
+76235ccb54cec7c52a8e03d401744501
+  $tcOperator :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13394407520575778702##
+                   14283481093189845429##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tcOperator1) -}
+9525a77012b118a817226ac01433c521
+  $tcOperator1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Operator"#) -}
+51496edced2054ee2499d3d831acd15c
+  $tcTree :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12760742082885189396##
+                   495700429952944465##
+                   ExpressionEvaluator.$trModule
+                   ExpressionEvaluator.$tcTree1) -}
+b145aad420a6496d44bfc3722c109dfa
+  $tcTree1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Tree"#) -}
+75ff8dda9a9514f66f96a55636bf4139
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   ExpressionEvaluator.$trModule2
+                   ExpressionEvaluator.$trModule1) -}
+28c37875e304cf26a80179fa490e497b
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "ExpressionEvaluator"#) -}
+446abb05ba5ab9504cd1bc8f441b42f5
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+84e7f845911ddf3e7d2d65a42d043281
+  $w$cshowsPrec ::
+    ExpressionEvaluator.Function -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: ExpressionEvaluator.Function)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   ExpressionEvaluator.Cosine
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowFunction4
+                        w1
+                   ExpressionEvaluator.Sine
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowFunction3
+                        w1
+                   ExpressionEvaluator.Exp
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowFunction2
+                        w1
+                   ExpressionEvaluator.Log
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowFunction1
+                        w1 }) -}
+7e4598044c7e60a101b0ac32d4620198
+  $w$cshowsPrec1 ::
+    ExpressionEvaluator.Operator -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: ExpressionEvaluator.Operator)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   ExpressionEvaluator.Plus
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowOperator5
+                        w1
+                   ExpressionEvaluator.Minus
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowOperator4
+                        w1
+                   ExpressionEvaluator.Multiply
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowOperator3
+                        w1
+                   ExpressionEvaluator.Divide
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowOperator2
+                        w1
+                   ExpressionEvaluator.Power
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ExpressionEvaluator.$fShowOperator1
+                        w1 }) -}
+09178ff60480fb8765ebcb8cf36718c3
+  $w$s^ ::
+    GHC.Types.Double -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+  {- Arity: 2, Strictness: <L,U(U)><S,U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Double)
+                   (w1 :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.ltInteger#
+                        w1
+                        ExpressionEvaluator.$s^2 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             w1
+                             ExpressionEvaluator.$s^2 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case w of ww { GHC.Types.D# ww1 ->
+                           ExpressionEvaluator.$wf ww1 w1 }
+                        GHC.Types.True -> 1.0## } }
+                   GHC.Types.True
+                   -> case ExpressionEvaluator.$s^1
+                      ret_ty GHC.Prim.Double#
+                      of {} } }) -}
+0d38d8bcf8e787b5b114848c01a51caf
+  $wf ::
+    GHC.Prim.Double# -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
+84e7f845911ddf3e7d2d65a42d043281
+  data Function = Cosine | Sine | Exp | Log
+7e4598044c7e60a101b0ac32d4620198
+  data Operator = Plus | Minus | Multiply | Divide | Power
+598dda882b8bee307630bc714a87c79c
+  type Stack = [ExpressionEvaluator.Tree]
+a93682e365c20b0fab550b1a5821ca77
+  data Tree
+    = BinaryNode ExpressionEvaluator.Operator
+                 ExpressionEvaluator.Tree
+                 ExpressionEvaluator.Tree
+    | UnaryNode ExpressionEvaluator.Function ExpressionEvaluator.Tree
+    | NumNode GHC.Types.Double
+    | VarNode GHC.Types.Char
+353f7fe0c7458d18bb5c3579d74dd864
+  createExpression :: GHC.Base.String -> ExpressionEvaluator.Tree
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 case ExpressionEvaluator.createExpression_go
+                        (ShuntingYarn.convert x)
+                        (GHC.Types.[] @ ExpressionEvaluator.Tree) of wild {
+                   [] -> GHC.List.badHead @ ExpressionEvaluator.Tree
+                   : x1 ds1 -> x1 }) -}
+4e2572a621588b81399df28a5c5b24bc
+  createExpression_go ::
+    [GHC.Types.Char]
+    -> ExpressionEvaluator.Stack -> ExpressionEvaluator.Stack
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+8027377380b72aed25ceacb27fea7f2a
+  derivationStep ::
+    ExpressionEvaluator.Tree
+    -> GHC.Types.Char -> ExpressionEvaluator.Tree
+  {- Arity: 2, Strictness: <S,1*U><L,U(U)> -}
+8c87aff43a4e08f5c5fd5a097fc51c97
+  deriveBy ::
+    ExpressionEvaluator.Tree
+    -> GHC.Types.Char -> ExpressionEvaluator.Tree
+  {- Arity: 2, Strictness: <S,1*U><L,U(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (t :: ExpressionEvaluator.Tree) (c :: GHC.Types.Char) ->
+                 ExpressionEvaluator.resolveTreeLoop
+                   (ExpressionEvaluator.derivationStep t c)) -}
+5da74bf0e48fdfddafc87ce0e6606a0a
+  evaluate ::
+    (GHC.Classes.Eq a, GHC.Float.Floating a, GHC.Show.Show a) =>
+    ExpressionEvaluator.Tree -> a
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(U)),A)><L,U(U,A,C(U),C(U),A,A,A,C(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U(A,C(U),A)> -}
+93d6e4ccbeeeec5fabc574dee7c37147
+  evaluate_$sevaluate :: ExpressionEvaluator.Tree -> GHC.Types.Double
+  {- Arity: 1, Strictness: <S,1*U> -}
+a93682e365c20b0fab550b1a5821ca77
+  inorderTraversal :: ExpressionEvaluator.Tree -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+f971b1146ca70512383c4363deceaef2
+  resolveTreeLoop ::
+    ExpressionEvaluator.Tree -> ExpressionEvaluator.Tree
+  {- Arity: 1, Strictness: <S,U> -}
+d2f80369538534ee8fd963de25f132fa
+  substitute ::
+    GHC.Types.Char
+    -> GHC.Types.Double
+    -> ExpressionEvaluator.Tree
+    -> ExpressionEvaluator.Tree
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,U(U)><L,U><S,1*U> -}
+instance [safe] GHC.Classes.Eq [ExpressionEvaluator.Function]
+  = ExpressionEvaluator.$fEqFunction
+instance [safe] GHC.Classes.Eq [ExpressionEvaluator.Operator]
+  = ExpressionEvaluator.$fEqOperator
+instance [safe] GHC.Classes.Eq [ExpressionEvaluator.Tree]
+  = ExpressionEvaluator.$fEqTree
+instance [safe] GHC.Show.Show [ExpressionEvaluator.Function]
+  = ExpressionEvaluator.$fShowFunction
+instance [safe] GHC.Show.Show [ExpressionEvaluator.Operator]
+  = ExpressionEvaluator.$fShowOperator
+instance [safe] GHC.Show.Show [ExpressionEvaluator.Tree]
+  = ExpressionEvaluator.$fShowTree
+"SPEC evaluate @ Double" [ALWAYS] forall ($dEq :: GHC.Classes.Eq
+                                                    GHC.Types.Double)
+                                         ($dFloating :: GHC.Float.Floating GHC.Types.Double)
+                                         ($dShow :: GHC.Show.Show GHC.Types.Double)
+  ExpressionEvaluator.evaluate @ GHC.Types.Double
+                               $dEq
+                               $dFloating
+                               $dShow
+  = ExpressionEvaluator.evaluate_$sevaluate
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

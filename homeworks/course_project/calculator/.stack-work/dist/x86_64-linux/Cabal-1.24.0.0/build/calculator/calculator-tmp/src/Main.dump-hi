@@ -1,0 +1,231 @@
+
+==================== FINAL INTERFACE ====================
+2017-01-16 18:30:18.488497062 UTC
+
+interface main@main:Main 8001
+  interface hash: f2d2533636f25348805b6c5c8a51d42b
+  ABI hash: 50032050b74992bc6a8e753e5108d619
+  export-list hash: ed96a7de955bd99df3db2d471e8e2f61
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: c104eef1a35db1ab9d3ec67af77c1f24
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.derivative
+  Main.equation
+  Main.main
+  Main.sample
+  Main.tree
+module dependencies: ExpressionEvaluator ShuntingYarn
+package dependencies: MissingH-1.4.0.1@MissingH-1.4.0.1-EKn7kuoDq1aaX1Pfc3iyM
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      transformers-0.5.2.0@transformers-0.5.2.0
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Float 469226b1bc53433e95d0167dec5d0312
+import  -/  base-4.9.0.0:GHC.Real 08bf4acb5f2508f89d6fbcd57fe232e9
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
+import  -/  ExpressionEvaluator 177043bb45a10c4faa5bf66c0b4c399e
+  exports: e36cc2577be9a7130dfd52bfd0adf289
+  createExpression 353f7fe0c7458d18bb5c3579d74dd864
+  deriveBy 8c87aff43a4e08f5c5fd5a097fc51c97
+  evaluate 5da74bf0e48fdfddafc87ce0e6606a0a
+  substitute d2f80369538534ee8fd963de25f132fa
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+c4dd69fdfc9aa2daa068341ee6720ad5
+  derivative :: GHC.Types.Char -> GHC.Types.IO GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.derivative1
+                  `cast`
+                (<GHC.Types.Char>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[GHC.Types.Char]>_R)) -}
+f8e9e77f6a732845356aaa456a1d36d9
+  derivative1 ::
+    GHC.Types.Char
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Types.Char] #)
+  {- Arity: 2, Strictness: <L,U(U)><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: GHC.Types.Char)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s,
+                    ExpressionEvaluator.inorderTraversal
+                      (ExpressionEvaluator.deriveBy Main.tree x) #)) -}
+6c6b9a354d56466b65bd80348309a602
+  equation :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "2 * ( x ^ 2 ) + sin (x+y)"#) -}
+85d8ee990fa017d1b5e563dd6c67d06e
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+7adab3fbaaf5f87dfa8c8c9fb9b98555
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main17
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main13
+                        GHC.Types.True
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main9
+                        GHC.Types.True
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.CString.unpackAppendCString#
+                      "\tSolution with x = 0 and y = PI/2 is: \t"#
+                      (case Main.main2 of ww { GHC.Types.D# ww1 ->
+                       GHC.Float.$w$sshowSignedFloat
+                         GHC.Float.$fShowDouble_$sshowFloat
+                         GHC.Show.shows22
+                         ww1
+                         (GHC.Types.[] @ GHC.Types.Char) }))
+                   GHC.Types.True
+                   ipv4 } } }) -}
+c552f7c34ae5b67be8736bc042514800
+  main10 :: GHC.Base.String
+  {- Unfolding: (ExpressionEvaluator.inorderTraversal Main.main11) -}
+9c8c0db30034a718528bb59da5ec0059
+  main11 :: ExpressionEvaluator.Tree
+  {- Unfolding: (ExpressionEvaluator.resolveTreeLoop Main.main12) -}
+a5ce605e114c7a0de452dcf2fc1fe08c
+  main12 :: ExpressionEvaluator.Tree
+  {- Unfolding: (ExpressionEvaluator.derivationStep
+                   Main.tree
+                   Main.main8) -}
+f894963cdf2948f0236e9a29997f8407
+  main13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "\tDerivative x is: "#
+                   Main.main14) -}
+c24a5d4ee1f28e56b478ed5d34347722
+  main14 :: GHC.Base.String
+  {- Unfolding: (ExpressionEvaluator.inorderTraversal Main.main15) -}
+a0b61dc47bce144b00ddea6ef5c904f7
+  main15 :: ExpressionEvaluator.Tree
+  {- Unfolding: (ExpressionEvaluator.resolveTreeLoop Main.main16) -}
+f7095efc426da24a6049de60cfce0b30
+  main16 :: ExpressionEvaluator.Tree
+  {- Unfolding: (ExpressionEvaluator.derivationStep
+                   Main.tree
+                   Main.main6) -}
+c7e44607fe090058abf0362b0d398306
+  main17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "\n\
+                   \Equation:  "#
+                   Main.equation) -}
+150bc8eb781233b1e8c0f44c4006919f
+  main18 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+963b3f1f06c8f875c5149ebe83c8e5e7
+  main2 :: GHC.Types.Double
+  {- Unfolding: (ExpressionEvaluator.evaluate_$sevaluate
+                   Main.main3) -}
+e457e41e5153bdde81aa8e61009ff21c
+  main3 :: ExpressionEvaluator.Tree
+  {- Unfolding: (ExpressionEvaluator.substitute
+                   Main.main8
+                   Main.main7
+                   Main.main4) -}
+44a8335fd5354867d976ef75ca6a237b
+  main4 :: ExpressionEvaluator.Tree
+  {- Unfolding: (ExpressionEvaluator.substitute
+                   Main.main6
+                   Main.main5
+                   Main.tree) -}
+6e444755bd18421f123f0f38ec049020
+  main5 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 0.0##) -}
+faa94dca8997fccb80f8da4170f1fa7c
+  main6 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'x'#) -}
+ca150e9aa8d896f578d93639bf6a7a7c
+  main7 :: GHC.Types.Double
+  {- HasNoCafRefs, Unfolding: (GHC.Types.D# 1.5707963267948966##) -}
+59b829ff762a847506fbc8e847acdd8f
+  main8 :: GHC.Types.Char
+  {- HasNoCafRefs, Unfolding: (GHC.Types.C# 'y'#) -}
+0523cdba9bd29e076e361fcf01707174
+  main9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "\tDerivative y is: "#
+                   Main.main10) -}
+d564e5a56ce680a60eede9ca01f6746d
+  sample :: GHC.Types.IO GHC.Types.Double
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.sample1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <GHC.Types.Double>_R)) -}
+779c487afa17952cf1d60bea7ab4f564
+  sample1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Double #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# s, Main.main2 #)) -}
+de12f7280ba6ecf0416c9034edd0e074
+  tree :: ExpressionEvaluator.Tree
+  {- Unfolding: (case ExpressionEvaluator.createExpression_go
+                        Main.tree1
+                        (GHC.Types.[] @ ExpressionEvaluator.Tree) of wild {
+                   [] -> GHC.List.badHead @ ExpressionEvaluator.Tree
+                   : x1 ds1 -> x1 }) -}
+09f672293a1dff7f07717835e05ce3ae
+  tree1 :: GHC.Base.String
+  {- Unfolding: (ShuntingYarn.convert Main.equation) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
